@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   VideoCard.css – Outer Carousel Thumbnail Card Styles
-   ═══════════════════════════════════════════════════════════ */
-
-/* ─── Card Container ──────────────────────────────────────── */
 .video-card {
   position: relative;
   flex: 0 0 auto;
@@ -30,7 +25,6 @@
   transform: translateY(-2px) scale(1.01);
 }
 
-/* ─── Thumbnail Image ─────────────────────────────────────── */
 .video-card__thumbnail {
   position: absolute;
   inset: 0;
@@ -44,7 +38,6 @@
   transform: scale(1.08);
 }
 
-/* ─── Skeleton Placeholder ────────────────────────────────── */
 .video-card__skeleton {
   position: absolute;
   inset: 0;
@@ -58,7 +51,6 @@
   animation: shimmer 1.5s infinite;
 }
 
-/* ─── Gradient Overlay ────────────────────────────────────── */
 .video-card__overlay {
   position: absolute;
   inset: 0;
@@ -71,7 +63,6 @@
   transition: opacity var(--transition-base);
 }
 
-/* ─── Play Icon ───────────────────────────────────────────── */
 .video-card__play-btn {
   position: absolute;
   top: 50%;
@@ -104,7 +95,6 @@
   margin-left: 3px;
 }
 
-/* ─── Duration Badge ──────────────────────────────────────── */
 .video-card__duration {
   position: absolute;
   top: 10px;
@@ -118,7 +108,6 @@
   letter-spacing: 0.5px;
 }
 
-/* ─── Bottom Info ─────────────────────────────────────────── */
 .video-card__info {
   position: absolute;
   bottom: 0;
@@ -158,13 +147,11 @@
   color: #ec4899;
 }
 
-/* ─── Ripple Effect ───────────────────────────────────────── */
 .video-card:focus-visible {
   outline: 2px solid var(--color-accent-1);
   outline-offset: 2px;
 }
 
-/* ─── Not yet in viewport (lazy) ─────────────────────────── */
 .video-card--placeholder {
   background: var(--color-bg-card);
   cursor: default;

@@ -1,14 +1,8 @@
-/* ═══════════════════════════════════════════════════════════
-   OuterCarousel.css – Horizontal scrolling video grid
-   ═══════════════════════════════════════════════════════════ */
-
-/* ─── Section Wrapper ─────────────────────────────────────── */
 .outer-carousel {
   width: 100%;
   padding: 0 0 var(--spacing-xl);
 }
 
-/* ─── Section Header ──────────────────────────────────────── */
 .outer-carousel__header {
   display: flex;
   align-items: center;
@@ -55,13 +49,11 @@
   font-weight: 400;
 }
 
-/* ─── Scroll Container ────────────────────────────────────── */
 .outer-carousel__track-wrapper {
   position: relative;
   overflow: hidden;
 }
 
-/* Fade edges */
 .outer-carousel__track-wrapper::before,
 .outer-carousel__track-wrapper::after {
   content: '';
@@ -108,7 +100,6 @@
   border-radius: 2px;
 }
 
-/* ─── Navigation Arrows ───────────────────────────────────── */
 .outer-carousel__nav {
   display: flex;
   gap: var(--spacing-sm);
@@ -143,7 +134,6 @@
   transform: none;
 }
 
-/* ─── Loading State ───────────────────────────────────────── */
 .outer-carousel__loading {
   display: flex;
   gap: var(--spacing-md);

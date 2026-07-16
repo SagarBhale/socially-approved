@@ -1,45 +1,32 @@
-/* ═══════════════════════════════════════════════════════════
-   index.css – Global Design Tokens & Base Styles
-   Socially Approved Carousel
-   ═══════════════════════════════════════════════════════════ */
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap');
 
-/* ─── CSS Variables (Design Tokens) ──────────────────────── */
 :root {
-  /* Brand Colors */
   --color-bg-primary: #0a0a0f;
   --color-bg-secondary: #111118;
   --color-bg-card: #16161f;
   --color-bg-elevated: #1e1e2a;
   --color-bg-glass: rgba(255, 255, 255, 0.05);
 
-  /* Accent Gradient */
   --color-accent-1: #7c3aed;
   --color-accent-2: #ec4899;
   --color-accent-3: #f97316;
   --gradient-primary: linear-gradient(135deg, #7c3aed 0%, #ec4899 50%, #f97316 100%);
   --gradient-subtle: linear-gradient(135deg, rgba(124, 58, 237, 0.15) 0%, rgba(236, 72, 153, 0.15) 100%);
 
-  /* Text */
   --color-text-primary: #f1f1f7;
   --color-text-secondary: #9b9bbb;
   --color-text-muted: #5a5a7a;
 
-  /* Borders */
   --color-border: rgba(255, 255, 255, 0.08);
   --color-border-hover: rgba(124, 58, 237, 0.4);
 
-  /* Shadows */
   --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
   --shadow-glow: 0 0 30px rgba(124, 58, 237, 0.3);
   --shadow-modal: 0 24px 64px rgba(0, 0, 0, 0.8);
 
-  /* Typography */
   --font-primary: 'Inter', sans-serif;
   --font-display: 'Outfit', sans-serif;
 
-  /* Spacing */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -47,12 +34,10 @@
   --spacing-xl: 32px;
   --spacing-2xl: 48px;
 
-  /* Transitions */
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Border Radius */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -60,7 +45,6 @@
   --radius-2xl: 24px;
 }
 
-/* ─── Reset & Base ────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -89,7 +73,6 @@ body {
   min-height: 100vh;
 }
 
-/* ─── Scrollbar Styling ───────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -108,7 +91,6 @@ body {
   background: var(--color-accent-2);
 }
 
-/* ─── Utility Classes ─────────────────────────────────────── */
 .gradient-text {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -135,7 +117,6 @@ body {
   border-width: 0;
 }
 
-/* ─── Animation Keyframes ─────────────────────────────────── */
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
   50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.6); }
@@ -168,7 +149,6 @@ body {
   100% { background-position: 200% 0; }
 }
 
-/* ─── Skeleton Loading ────────────────────────────────────── */
 .skeleton {
   background: linear-gradient(
     90deg,

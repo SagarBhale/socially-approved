@@ -1,8 +1,3 @@
-/* ═══════════════════════════════════════════════════════════
-   InnerCarousel.css – Modal carousel with 3 videos at a time
-   ═══════════════════════════════════════════════════════════ */
-
-/* ─── MUI Dialog Override ─────────────────────────────────── */
 .inner-carousel__dialog-paper {
   background: var(--color-bg-primary) !important;
   max-width: 100vw !important;
@@ -11,7 +6,6 @@
   border-radius: 0 !important;
 }
 
-/* ─── Modal Root ──────────────────────────────────────────── */
 .inner-carousel {
   width: 100vw;
   height: 100vh;
@@ -22,7 +16,6 @@
   position: relative;
 }
 
-/* ─── Top Bar ─────────────────────────────────────────────── */
 .inner-carousel__topbar {
   display: flex;
   align-items: center;
@@ -69,7 +62,6 @@
   color: var(--color-text-primary);
 }
 
-/* ─── Index indicator ─────────────────────────────────────── */
 .inner-carousel__indicator {
   font-size: 13px;
   color: var(--color-text-secondary);
@@ -79,7 +71,6 @@
   padding: 4px 12px;
 }
 
-/* ─── Carousel Track Area ─────────────────────────────────── */
 .inner-carousel__stage {
   flex: 1;
   display: flex;
@@ -89,7 +80,6 @@
   min-height: 0;
 }
 
-/* ─── Slides Container ────────────────────────────────────── */
 .inner-carousel__track {
   display: flex;
   width: 100%;
@@ -98,7 +88,6 @@
   will-change: transform;
 }
 
-/* ─── Individual Slide ────────────────────────────────────── */
 .inner-carousel__slide {
   flex: 0 0 calc(100% / 3);
   height: 100%;
@@ -107,7 +96,6 @@
   transition: opacity var(--transition-base), transform var(--transition-base);
 }
 
-/* Side slides are slightly scaled down */
 .inner-carousel__slide--left,
 .inner-carousel__slide--right {
   opacity: 0.45;
@@ -119,7 +107,6 @@
   transform: scale(1);
 }
 
-/* ─── Nav Arrow Buttons ───────────────────────────────────── */
 .inner-carousel__arrow {
   position: absolute;
   top: 50%;
@@ -163,7 +150,6 @@
   right: var(--spacing-lg);
 }
 
-/* ─── Dot Navigation ──────────────────────────────────────── */
 .inner-carousel__dots {
   display: flex;
   justify-content: center;
@@ -191,7 +177,6 @@
   background: var(--color-accent-1);
 }
 
-/* ─── Bottom Comment Panel ────────────────────────────────── */
 .inner-carousel__comments {
   padding: var(--spacing-sm) var(--spacing-xl) var(--spacing-md);
   flex-shrink: 0;
@@ -261,7 +246,6 @@
   line-height: 1.4;
 }
 
-/* ─── Comment Input ───────────────────────────────────────── */
 .inner-carousel__comment-form {
   display: flex;
   gap: var(--spacing-sm);
@@ -306,7 +290,6 @@
   opacity: 0.85;
 }
 
-/* ─── Responsive: Mobile (< 768px) ──────────────────────── */
 @media (max-width: 768px) {
   .inner-carousel__slide {
     flex: 0 0 100%;
