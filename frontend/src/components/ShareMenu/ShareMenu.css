@@ -1,0 +1,117 @@
+/* ═══════════════════════════════════════════════════════════
+   ShareMenu.css – Share popover / bottom-sheet styles
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Trigger Button ──────────────────────────────────────── */
+.share-menu__trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  font-family: var(--font-primary);
+  transition: color var(--transition-fast);
+}
+
+.share-menu__trigger:hover {
+  color: #fff;
+}
+
+.share-menu__trigger-icon {
+  font-size: 20px !important;
+}
+
+/* ─── Popover Paper ───────────────────────────────────────── */
+.share-menu__paper {
+  background: var(--color-bg-elevated) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--radius-lg) !important;
+  padding: var(--spacing-md) !important;
+  box-shadow: var(--shadow-modal) !important;
+  min-width: 220px;
+}
+
+/* ─── Header ──────────────────────────────────────────────── */
+.share-menu__header {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-sm);
+  padding: 0 var(--spacing-xs);
+}
+
+/* ─── Platform List ───────────────────────────────────────── */
+.share-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ─── Platform Item ───────────────────────────────────────── */
+.share-menu__item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: 10px var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-primary);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  transition: background var(--transition-fast);
+}
+
+.share-menu__item:hover {
+  background: var(--color-bg-glass);
+}
+
+.share-menu__item--copied {
+  color: #4ade80;
+}
+
+/* ─── Platform Icon ───────────────────────────────────────── */
+.share-menu__item-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 18px;
+}
+
+.share-menu__item-icon--copy     { background: rgba(99, 102, 241, 0.2); color: #818cf8; }
+.share-menu__item-icon--twitter  { background: rgba(29, 155, 240, 0.2); color: #1d9bf0; }
+.share-menu__item-icon--whatsapp { background: rgba(37, 211, 102, 0.2); color: #25d366; }
+.share-menu__item-icon--facebook { background: rgba(24, 119, 242, 0.2); color: #1877f2; }
+.share-menu__item-icon--instagram {
+  background: linear-gradient(135deg, rgba(253, 29, 29, 0.2), rgba(131, 58, 180, 0.2));
+  color: #fd1d1d;
+}
+
+/* ─── Divider ─────────────────────────────────────────────── */
+.share-menu__divider {
+  height: 1px;
+  background: var(--color-border);
+  margin: var(--spacing-sm) 0;
+}
+
+/* ─── Copy Success Toast ──────────────────────────────────── */
+.share-menu__toast {
+  font-size: 12px;
+  color: #4ade80;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  text-align: center;
+  animation: fadeIn var(--transition-fast) ease;
+}

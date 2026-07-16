@@ -1,0 +1,12 @@
+# Render.com Deployment Config
+services:
+  - type: web
+    name: socially-approved-api
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000

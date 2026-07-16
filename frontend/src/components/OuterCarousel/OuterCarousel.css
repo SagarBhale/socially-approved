@@ -1,0 +1,171 @@
+/* ═══════════════════════════════════════════════════════════
+   OuterCarousel.css – Horizontal scrolling video grid
+   ═══════════════════════════════════════════════════════════ */
+
+/* ─── Section Wrapper ─────────────────────────────────────── */
+.outer-carousel {
+  width: 100%;
+  padding: 0 0 var(--spacing-xl);
+}
+
+/* ─── Section Header ──────────────────────────────────────── */
+.outer-carousel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--spacing-xl) var(--spacing-md);
+}
+
+.outer-carousel__title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.outer-carousel__title-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-accent-2);
+  background: rgba(236, 72, 153, 0.12);
+  border: 1px solid rgba(236, 72, 153, 0.25);
+  border-radius: 20px;
+  padding: 3px 10px;
+  letter-spacing: 0.3px;
+}
+
+.outer-carousel__title-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent-2);
+  animation: pulse-glow 2s infinite;
+}
+
+.outer-carousel__count {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+/* ─── Scroll Container ────────────────────────────────────── */
+.outer-carousel__track-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fade edges */
+.outer-carousel__track-wrapper::before,
+.outer-carousel__track-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.outer-carousel__track-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg-primary), transparent);
+}
+
+.outer-carousel__track-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg-primary), transparent);
+}
+
+.outer-carousel__track {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-xl) var(--spacing-md);
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent-1) transparent;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
+}
+
+.outer-carousel__track:active {
+  cursor: grabbing;
+}
+
+.outer-carousel__track::-webkit-scrollbar {
+  height: 4px;
+}
+
+.outer-carousel__track::-webkit-scrollbar-thumb {
+  background: var(--color-accent-1);
+  border-radius: 2px;
+}
+
+/* ─── Navigation Arrows ───────────────────────────────────── */
+.outer-carousel__nav {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.outer-carousel__nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-bg-elevated);
+  color: var(--color-text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background var(--transition-fast),
+    border-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.outer-carousel__nav-btn:hover {
+  background: var(--color-accent-1);
+  border-color: var(--color-accent-1);
+  transform: scale(1.1);
+}
+
+.outer-carousel__nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ─── Loading State ───────────────────────────────────────── */
+.outer-carousel__loading {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-xl);
+}
+
+.outer-carousel__skeleton-card {
+  flex: 0 0 auto;
+  width: 200px;
+  height: 300px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-elevated) 25%,
+    rgba(255, 255, 255, 0.06) 50%,
+    var(--color-bg-elevated) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.outer-carousel__skeleton-card:nth-child(2) { animation-delay: 0.1s; }
+.outer-carousel__skeleton-card:nth-child(3) { animation-delay: 0.2s; }
+.outer-carousel__skeleton-card:nth-child(4) { animation-delay: 0.3s; }
+.outer-carousel__skeleton-card:nth-child(5) { animation-delay: 0.4s; }
